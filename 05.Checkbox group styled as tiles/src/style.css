@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  transition: all 0.2s ease;
+}
+
+:root {
+}
+
+body {
+  background-color: #f8f8f9;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 3rem auto;
+}
+
+.header {
+  text-align: center;
+  color: #9c9c9c;
+  margin-bottom: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .checkbox-item {
+  width: calc(100% / 4 - 30px);
+  /* height: auto; */
+  box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+  border: 2px solid #b5bfd9;
+  padding: 4px;
+  border-radius: 8px;
+  aspect-ratio: 1 / 1;
+  background-color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.content .item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content .item-content i {
+  font-size: 4rem;
+  color: #494949;
+}
+
+.checkbox-input input {
+  visibility: hidden;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: white;
+  vertical-align: middle;
+  border: 1px solid #b5bfd9;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+
+  opacity: 0.85;
+}
+
+.content .checkbox-item:hover {
+  border-color: #2260ff;
+}
+
+.content .checkbox-item:target,
+.content .checkbox-item:active {
+  box-shadow: 0px 0px 4px 4px rgb(153, 187, 255);
+  -webkit-box-shadow: 0px 0px 4px 4px rgb(153, 187, 255);
+  -moz-box-shadow: 0px 0px 4px 4px rgb(153, 187, 255);
+}
+
+.content .checkbox-item:hover .checkbox-input input {
+  visibility: visible;
+}
+
+.checkbox-input input:checked {
+  visibility: visible;
+  background-color: #2260ff;
+}
+
+.checkbox-input input::before {
+  content: "\2713";
+  display: inline-block;
+  color: white;
+  position: absolute;
+  top: -1px;
+  left: 3px;
+}

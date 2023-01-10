@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Outfit", "sans-serif";
+  font-size: 1rem;
+}
+
+:root {
+  --c-blue-900: #081030;
+  --c-blue-800: #111b40;
+  --c-blue-700: #152148;
+  --c-blue-500: #1d7bdb;
+  --c-blue-300: #293359;
+  --c-blue-200: #4e5985;
+  --c-blue-100: #dfe8ff;
+  --c-green-400: #4ade80;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--c-blue-900);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-table {
+  background-color: var(--c-blue-700);
+  background-image: linear-gradient(
+    135deg,
+    rgba(74, 222, 128, 0.15),
+    rgba(29, 123, 219, 0.1) 20%,
+    var(--c-blue-700) 40%,
+    var(--c-blue-700) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  color: white;
+  max-width: 25rem;
+  height: 36rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.price-table::after {
+  content: "";
+  z-index: -1;
+  display: block;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  background-image: linear-gradient(
+    135deg,
+    var(--c-green-400),
+    var(--c-blue-500) 40%,
+    var(--c-blue-300) 60%,
+    var(--c-blue-700) 100%
+  );
+  border-radius: 1rem;
+}
+
+.price {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price .currency {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1.5rem 0;
+}
+
+.description {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.features {
+  margin-top: 3rem;
+}
+
+.feature {
+  position: relative;
+}
+
+.feature summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.feature:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.feature[open] div {
+  -webkit-animation: scale 0.15s ease;
+  animation: scale 0.15s ease;
+}
+
+.feature .answer {
+  position: absolute;
+  top: -190%;
+  right: 10%;
+  background: var(--c-blue-800);
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid var(--c-blue-100);
+  width: 13rem;
+  height: 3rem;
+}
+
+.checkmark {
+  background: var(--c-green-400);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}

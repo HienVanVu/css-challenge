@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", "sans-serif";
+}
+
+:root {
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 7rem 0;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.header h2 {
+  margin: 1rem 0px 1.5rem 0;
+  font-size: 1.3rem;
+  color: #999;
+}
+
+details[open] {
+  border-left: 3px solid #b5bfd9;
+}
+
+section details summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 8rem;
+  border-top: 1px solid #b5bfd9;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0 1rem;
+}
+
+section details summary:hover {
+  background-color: #f2f5f9;
+}
+
+section details summary .category-section {
+  flex-grow: 1;
+}
+
+section details summary i {
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+section details summary i.ic-purple {
+  background: #f3e1e1;
+}
+
+section details summary i.ic-orange {
+  background: #f2dcbb;
+}
+
+section details summary i.ic-blue {
+  background: #e0ece4;
+}
+
+.category-section .name {
+  font-size: 1.4rem;
+  font-weight: 650;
+  margin-bottom: 5px;
+  min-width: 10rem;
+}
+
+.category-section .category {
+  color: #999;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+summary .price {
+  font-size: 1.2rem;
+  font-weight: 650;
+  text-align: center;
+}
+
+summary .price.plus-price {
+  color: #289672;
+}
+
+summary .price.sub-price {
+  color: red;
+}
+
+section details .detail {
+  display: flex;
+  gap: 5%;
+  padding: 3rem 0 3rem 2rem;
+  flex-wrap: wrap;
+}
+
+section details .detail div > p:first-child {
+  font-weight: 600;
+}
+
+section details .detail div > p:last-child {
+  margin-left: 2rem;
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 650px) {
+  section details .detail {
+    /* gap: 2rem; */
+  }
+}

@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "sans-serif";
+  line-height: 1.5rem;
+  transition: transform 0.4s ease, all 0.2s ease;
+}
+
+:root {
+}
+
+body {
+  background-color: #f2f5f7;
+}
+
+.container {
+  width: 90%;
+  max-width: 450px;
+  background-color: #fff;
+  margin: 3rem auto;
+  /* padding: 2rem 3rem; */
+  border-radius: 10px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.15), 0 7px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.menu-content {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 2rem 1rem;
+}
+
+.menu-item {
+  padding: 10px 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.menu-item:hover {
+  transform: rotate(3deg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 15%), 0 7px 20px 0 rgb(0 0 0 / 10%);
+}
+
+.menu-item:nth-of-type(even):hover,
+.menu-item:nth-of-type(even):focus {
+  transform: scale(1.025) rotate(-3deg);
+}
+
+.menu-item .header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.menu-item .description {
+  color: #6b7280;
+}
+
+/* .menu-item:not(:last-child) {
+  margin-bottom: 20px;
+} */
+
+.menu-footer {
+  padding: 1.25rem 1.75rem;
+  background-color: #f3f4f6;
+}
+
+.menu-footer .header {
+  color: #9ca3af;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.menu-footer .content {
+  display: flex;
+  gap: 1rem;
+  /* padding: 5px 10px; */
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.menu-footer .content p {
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menu-footer .content p:hover {
+  background-color: #e5e7eb;
+}
