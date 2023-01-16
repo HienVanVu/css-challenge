@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Sofia Sans", sans-serif;
+  line-height: 1.5;
+}
+
+:root {
+}
+
+.form-section input[type="submit"] {
+  padding: 5px 30px;
+  border-radius: 8px;
+  border: none;
+  background-color: #b3e6ff;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.form-section input[type="submit"]:hover {
+  background-color: #1ab2ff;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  margin: 16px 0;
+}
+
+.input .required-start {
+  color: red;
+}
+
+.input input {
+  outline: none;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+}
+
+.input input ~ span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #3399ff;
+  transition: all 0.5s ease;
+}
+
+.input input:focus ~ span {
+  width: 100%;
+  transition: 0.4s;
+}
