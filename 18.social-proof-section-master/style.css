@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+/* format css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* end format css */
+
+html {
+  --dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+  font-size: 15px;
+  font-family: "League Spartan", sans-serif;
+  line-height: 1.1;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  max-width: 90%;
+  width: 1200px;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 50px;
+}
+
+header {
+  color: var(--dark-magenta);
+  margin-right: 200px;
+}
+
+header .title {
+  margin-right: 150px;
+  margin-bottom: 30px;
+}
+
+.rating .rating__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--light-grayish-magenta);
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-left: attr(data-mg) px;
+  width: 80%;
+}
+
+.rating__item[data-mg="10"] {
+  margin-left: 40px;
+}
+
+.rating__item[data-mg="20"] {
+  margin-left: 80px;
+}
+
+.rating .rating__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.rating .rating__item img:not(:last-child) {
+  margin-right: 5px;
+}
+
+.comments {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.comments .comment__item {
+  background-color: var(--dark-magenta);
+  color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  height: 150px;
+}
+
+.comment__item[data-mg="10"] {
+  margin-top: 10px;
+}
+
+.comment__item[data-mg="20"] {
+  margin-top: 20px;
+}
+
+.comments .comment__item .personal {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.comments .comment__item .avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.comments .comment__item .personal .info .position {
+  margin-top: 3px;
+  color: var(--soft-pink);
+}
+
+.comments .comment__item .comment {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  header,
+  .rating {
+    grid-column: span 2;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  header .title {
+    margin: 0;
+  }
+
+  .rating .rating__item {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .comments {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
