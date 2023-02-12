@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  color: var(--white);
+  font-family: "Lexend Deca", "Big Shoulders Display", sans-serif;
+}
+
+html {
+  --bright-orange: hsl(31, 77%, 52%);
+  --primary-dark-cyan: hsl(184, 100%, 22%);
+  --secondary-dark-cyan: hsl(179, 100%, 13%);
+  --white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.container {
+  width: 1000px;
+  max-width: 90%;
+}
+
+.cards {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cards .card {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cards .card img {
+  width: 50px;
+}
+
+.cards .card .title {
+  font-size: 30px;
+  font-family: "Big Shoulders Display";
+  text-transform: uppercase;
+}
+
+.cards .card.card--1 {
+  background-color: var(--bright-orange);
+  color: var(--bright-orange);
+}
+
+.cards .card.card--2 {
+  background-color: var(--primary-dark-cyan);
+  color: var(--primary-dark-cyan);
+}
+
+.cards .card.card--3 {
+  background-color: var(--secondary-dark-cyan);
+  color: var(--secondary-dark-cyan);
+}
+
+.cards .card button {
+  color: inherit;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 32px;
+  width: 50%;
+  min-width: 100px;
+  cursor: pointer;
+  border: 2px solid var(--white);
+  transition: all 0.2s ease;
+}
+
+.cards .card button:hover {
+  background-color: inherit;
+  color: var(--white);
+}
+
+@media only screen and (max-width: 1090px) {
+  body {
+    width: unset;
+    height: unset;
+  }
+
+  .cards {
+    flex-direction: column;
+    width: 400px;
+    margin: 30px auto;
+  }
+}
