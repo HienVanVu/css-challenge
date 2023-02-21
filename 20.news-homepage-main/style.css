@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+  --bg-menu: hsla(240, 100%, 5%, 0.5);
+
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  position: relative;
+}
+
+.container {
+  max-width: 96%;
+  width: 500px;
+  margin: auto;
+  display: grid;
+  gap: 50px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+header .nav a {
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+  transition: all 0.2s ease;
+}
+
+header .nav a:hover {
+  color: var(--soft-orange);
+}
+
+header .menu-icon {
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  gap: 50px;
+}
+
+article {
+  display: grid;
+}
+
+article img {
+  width: 100%;
+}
+
+article .title {
+  font-size: 30px;
+  font-weight: 800;
+
+  margin: 20px 0;
+}
+
+article .description {
+  color: var(--dark-grayish-blue);
+}
+
+article button {
+  border: none;
+  outline: none;
+  padding: 20px 0;
+  width: 200px;
+  background-color: var(--soft-red);
+  color: var(--off-white);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 30px 0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+article button:hover {
+  background-color: var(--very-dark-blue);
+}
+
+main .news {
+  background-color: var(--very-dark-blue);
+  color: var(--off-white);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+main .news .header {
+  color: var(--soft-orange);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+main .news .news__item:not(:last-child) {
+  border-bottom: 1px solid var(--dark-grayish-blue);
+  padding-bottom: 20px;
+}
+
+main .news .news__item .description {
+  color: var(--dark-grayish-blue);
+}
+
+main .reviews {
+  display: grid;
+  gap: 16px;
+}
+
+main .reviews .review__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+main .reviews .review__item .thubnail {
+  width: 100px;
+}
+
+main .reviews .review__item .content .no {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--dark-grayish-blue);
+  opacity: 0.6;
+}
+main .reviews .review__item .content .title {
+  font-weight: 800;
+  font-size: 20px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+main .reviews .review__item .content .title:hover {
+  color: var(--soft-red);
+}
+
+main .reviews .review__item .content .description {
+  color: var(--dark-grayish-blue);
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.mobile-menu.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.mobile-menu .menu {
+  background-color: var(--off-white);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  z-index: 1;
+}
+
+.mobile-menu .menu img {
+  width: 30px;
+  align-self: flex-end;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.mobile-menu .menu .menu__item {
+  text-decoration: none;
+  color: var(--very-dark-blue);
+}
+
+.mobile-menu .backdrop {
+  background-color: var(--bg-menu);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  header .nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  .main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  article {
+    grid-column: span 2;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  article img {
+    grid-column: span 2;
+  }
+
+  article .description {
+    align-self: center;
+  }
+
+  article .title {
+    grid-row: span 2;
+  }
+
+  .reviews {
+    grid-column: span 3;
+  }
+
+  main .reviews .review__item {
+    grid-column: span 1;
+    grid-row: 1;
+  }
+}
