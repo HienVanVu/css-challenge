@@ -1,0 +1,17 @@
+.box-shadow {
+  height: 500px;
+  width: 500px;
+  background-color: aliceblue;
+  box-shadow: 0 0 0 1px black;
+  text-align: center;
+  line-height: 50px;
+  margin-right: 10px;
+  display: inline-block;
+  transition: all .3s ease;
+  /* border: 1px solid #ccc; */
+}
+
+.box-shadow:hover {
+  box-shadow: 0 0 5px 1px red ;
+  /* border: 1px solid red; */
+}
