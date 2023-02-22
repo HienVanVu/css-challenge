@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --linear-gradient-1: hsl(249, 99%, 64%);
+  --linear-gradient-2: hsl(278, 94%, 30%);
+  --red: hsl(0, 100%, 66%);
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: "Space Grotesk";
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  width: 564px;
+  margin: auto;
+  background-image: url(images/bg-main-mobile.png);
+  background-size: contain;
+  background-repeat-y: no-repeat;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40% 60%;
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  grid-row: 1;
+  grid-column: span 1;
+}
+
+.card .img-front,
+.card .img-back {
+  visibility: hidden;
+}
+
+.card .front {
+  position: absolute;
+  z-index: 1;
+  bottom: -28px;
+  background-image: url(images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.card .front .info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card .front .info .logo {
+  width: 60px;
+}
+
+.card .front .info .card-number {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card .front .info div div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .back {
+  position: absolute;
+  right: 0;
+  background-image: url(images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.card .back .cvc {
+  position: absolute;
+  z-index: 1;
+  right: 58px;
+  top: 113px;
+  font-size: 10px;
+  color: var(--white);
+}
+
+.form {
+  margin-top: 60px;
+  width: 100%;
+}
+
+.form .form-control {
+  /* margin: 20px 0; */
+}
+
+.form .form-control label {
+  display: block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.form .form-control input {
+  outline: none;
+  border: 1px solid var(--light-grayish-violet);
+  padding: 10px;
+  font-size: 18px;
+  width: 100%;
+  color: var(--very-dark-violet);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.form .form-control input:hover,
+.form .form-control input:focus {
+  background: linear-gradient(white, white) padding-box, linear-gradient(to right, var(--linear-gradient-1), var(--linear-gradient-2)) border-box;
+  border: 1px solid transparent;
+}
+
+.form .form-control .input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.form .form-group {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.form .form-group .form-control {
+  flex: 1;
+}
+
+.form button {
+  width: 100%;
+  outline: none;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--very-dark-violet);
+  font-size: 18px;
+  color: var(--white);
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.form-control p.error {
+  visibility: hidden;
+}
+
+.form-control.error p.error {
+  color: var(--red);
+  font-size: 12px;
+  margin-top: 6px;
+  visibility: visible;
+}
+
+.form-control.error input.error {
+  border-color: var(--red);
+}
