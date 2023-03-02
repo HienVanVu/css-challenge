@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+body {
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 500px;
+  max-width: 90%;
+}
+
+header,
+main {
+  padding: 20px;
+  border-radius: 16px;
+}
+
+header {
+  background-color: var(--soft-red);
+  color: var(--very-pale-orange);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .money {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+main {
+  background-color: var(--very-pale-orange);
+}
+
+main h1 {
+  font-size: 28px;
+}
+
+main .saving-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--cream);
+  padding-bottom: 10px;
+}
+
+main .saving-plan .item {
+  cursor: pointer;
+  text-align: center;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .saving-plan .item .money {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
+  background-color: var(--dark-brown);
+  padding: 4px;
+  color: var(--very-pale-orange);
+  margin-bottom: 4px;
+  border-radius: 6px;
+}
+
+main .saving-plan .item:hover .money {
+  visibility: visible;
+  opacity: 1;
+}
+
+main .saving-plan .item .column {
+  height: var(--height);
+  width: 100%;
+  background-color: var(--soft-red);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+main .saving-plan .item:hover .column {
+  opacity: 0.8;
+}
+
+main .saving-plan .item .column.hightest {
+  background-color: var(--cyan);
+}
+
+.oppacity {
+  opacity: 0.5;
+}
+
+main .overview {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: flex-end;
+}
+
+main .overview .money {
+  font-size: 36px;
+}
+
+main .overview .growth {
+  text-align: end;
+}
