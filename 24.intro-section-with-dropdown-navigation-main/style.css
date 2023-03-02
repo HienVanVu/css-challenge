@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+
+  font-family: "Epilogue";
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: var(--medium-gray);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--almost-black);
+}
+
+.container {
+  width: 1980px;
+  max-width: 96%;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  gap: 100px;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  gap: 50px;
+}
+
+nav .nav__item {
+  position: relative;
+  /* width: fit-content; */
+}
+
+nav .nav__item .main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+nav .nav__item .sub-nav {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  width: max-content;
+  right: 0;
+  padding: 20px;
+  border-radius: 8px;
+
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+nav .nav__item:hover .sub-nav {
+  display: flex;
+  animation: toLeftBottom 0.2s ease 0s 1 normal forwards;
+}
+
+nav .nav__item .down,
+nav .nav__item:hover .up {
+  display: block;
+}
+
+nav .nav__item:hover .down,
+nav .nav__item .up {
+  display: none;
+}
+
+header .user a {
+  padding: 10px 20px;
+}
+
+header .user a.register {
+  border: 2px solid var(--medium-gray);
+  border-radius: 16px;
+}
+
+@keyframes toLeftBottom {
+  0% {
+    scale: 0;
+  }
+
+  80% {
+    scale: 1.05;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
