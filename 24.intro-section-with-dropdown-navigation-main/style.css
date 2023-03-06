@@ -16,6 +16,17 @@ html {
   line-height: 1.5;
 }
 
+body {
+  /* width: 100vw;
+  height: 100vh; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  margin: auto;
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
   color: var(--medium-gray);
@@ -27,7 +38,6 @@ a:hover {
 }
 
 .container {
-  width: 1980px;
   max-width: 96%;
   margin: auto;
 }
@@ -40,6 +50,12 @@ header {
 }
 
 nav {
+  flex: 1;
+  display: flex;
+  gap: 50px;
+}
+
+nav .navigation {
   flex: 1;
   display: flex;
   gap: 50px;
@@ -94,6 +110,89 @@ header .user a.register {
   border-radius: 16px;
 }
 
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: hsla(0, 0%, 0%, 0.4);
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+  cursor: pointer;
+  display: none;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px auto;
+  width: 1200px;
+  max-width: 90%;
+  gap: 50px;
+}
+
+main .banner {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 2;
+  text-align: center;
+}
+
+main .banner img.desktop {
+  /* width: 500px; */
+  max-width: 100%;
+}
+
+main .banner img.mobile {
+  display: none;
+}
+
+main article {
+  align-self: center;
+}
+
+main article h1 {
+  font-size: 50px;
+}
+
+main article .description {
+  opacity: 0.7;
+  margin: 20px 0;
+}
+
+main article button {
+  border: 2px solid var(--almost-black);
+  padding: 12px 20px;
+  background-color: var(--almost-black);
+  color: var(--almost-white);
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+main article button:hover {
+  background-color: var(--almost-white);
+  color: var(--almost-black);
+}
+
+main .products {
+  align-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 @keyframes toLeftBottom {
   0% {
     scale: 0;
@@ -105,5 +204,87 @@ header .user a.register {
 
   100% {
     scale: 1;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  nav {
+    background-color: var(--almost-white);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 100px;
+    z-index: 2;
+    transform: translateX(300px);
+    transition: all 0.2s ease;
+  }
+
+  nav.is-open {
+    transform: translateX(0);
+  }
+
+  .is-open {
+    display: block;
+  }
+
+  nav .navigation {
+    flex: unset;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav .user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav .nav__item .sub-nav {
+    position: unset;
+    box-shadow: unset;
+  }
+
+  header .user a.register {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .backdrop.is-open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  main {
+    max-width: 100%;
+  }
+
+  main .banner,
+  main article,
+  main .products {
+    grid-column: span 2;
+    grid-row: span 1;
+    text-align: center;
+  }
+
+  main article,
+  main .products {
+    padding: 0 20px;
+  }
+
+  main .banner img.desktop {
+    display: none;
+  }
+
+  main .banner img.mobile {
+    display: inline;
+    max-width: 100%;
   }
 }
