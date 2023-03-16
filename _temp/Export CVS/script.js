@@ -60,4 +60,18 @@ function exportCSV(e) {
   // Encodes the CSV content URI using the encodeURI() function and opens a new window with the encoded URI using the window.open() function
   var encodedUri = encodeURI(csvContent);
   window.open(encodedUri);
+
+  // for LWC
+  // // Creating anchor element to download
+  // let downloadElement = document.createElement("a");
+
+  // // This  encodeURI encodes special characters, except: , / ? : @ & = + $ # (Use encodeURIComponent() to encode these characters).
+  // downloadElement.href = "data:text/csv;charset=utf-8," + encodeURI(csvContent);
+  // downloadElement.target = "_self";
+  // // CSV File Name
+  // downloadElement.download = "download.csv";
+  // // below statement is required if you are using firefox browser
+  // document.body.appendChild(downloadElement);
+  // // click() Javascript function to download CSV file
+  // downloadElement.click();
 }
