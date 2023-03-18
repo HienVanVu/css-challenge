@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter";
+  font-size: 16px;
+
+  --primary-bg-color: #2ea6f7;
+  --secondary-bg-color: #f3fafe;
+  --third-bg-color: #cce1ed;
+
+  --number-of-item: 3;
+  --column-gap: 20px;
+  --total-gap: calc((var(--number-of-item) - 1) * var(--column-gap));
+}
+
+.container {
+  width: 1280px;
+  max-width: 90%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.slider {
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.contents {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.contents .item {
+  background-color: var(--secondary-bg-color);
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.contents .item:hover > div {
+  transition: all 0.2s ease;
+  transform: scale(1.05);
+}
+
+.contents .item .thubnail {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.contents .item .thubnail img {
+  width: 100%;
+  height: 100%;
+}
+
+.contents .item .content {
+  padding: 8px 10px 14px;
+}
+
+.contents .item .date {
+  margin-bottom: 10px;
+}
+
+.contents .item .date p {
+  background-color: var(--third-bg-color);
+  padding: 2px;
+  display: inline;
+  font-size: 14px;
+}
+
+.contents .item .title p {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

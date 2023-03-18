@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+html {
+  font-family: "Inter";
+}
+
+.paging,
+.number-section {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.paging span {
+  border: 1px solid #ccc;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.paging span.is-active,
+.paging span:hover {
+  background: black;
+  color: white;
+}
+
+.paging span.is-active:hover {
+  opacity: 0.7;
+}

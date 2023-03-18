@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter";
+  font-size: 16px;
+
+  --primary-bg-color: #2ea6f7;
+  --secondary-bg-color: #f3fafe;
+  --third-bg-color: #cce1ed;
+
+  --number-of-item: 1;
+  --column-gap: 20px;
+  --total-gap: calc((var(--number-of-item) - 1) * var(--column-gap));
+}
+
+.container {
+  width: 400px;
+  max-width: 90%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.slider {
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.contents {
+  gap: var(--column-gap);
+  flex: 1;
+  overflow-x: hidden;
+}
+
+.slider-icon {
+  background-color: #ccc;
+  aspect-ratio: 1/1;
+  width: 30px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.slider-icon:hover {
+  color: white;
+  background-color: var(--primary-bg-color);
+}
+
+.contents .item {
+  background-color: var(--secondary-bg-color);
+  flex: 0 0 calc((100% / var(--number-of-item)) - (var(--total-gap) / var(--number-of-item)));
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.contents .item:hover > div {
+  transition: all 0.2s ease;
+  transform: scale(1.05);
+}
+
+.contents .item .thubnail {
+  /* height: 150px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.contents .item .thubnail img {
+  width: 100%;
+  height: 100%;
+}
+
+.sliders {
+  display: flex;
+  gap: var(--column-gap);
+}
+
+.slider__item {
+  width: 40px;
+  height: 5px;
+  border-radius: 2px;
+  background-color: var(--primary-bg-color);
+  opacity: 0.5;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.slider__item.is-active {
+  opacity: 1;
+}
+
+.flex {
+  display: flex;
+}
