@@ -40,8 +40,9 @@ html {
 
 .slider-icon {
   background-color: #ccc;
-  aspect-ratio: 1/1;
   width: 30px;
+  height: 30px;
+  padding: 8px;
   border-radius: 8px;
   align-items: center;
   justify-content: center;
@@ -50,8 +51,12 @@ html {
 }
 
 .slider-icon:hover {
-  color: white;
   background-color: var(--primary-bg-color);
+}
+
+.slider-icon:hover svg path {
+  fill: white;
+  transition: all 0.2s ease;
 }
 
 .contents .item {
@@ -105,4 +110,23 @@ html {
 
 .flex {
   display: flex;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.absolute.left {
+  transform: translateX(-40px);
+}
+
+.absolute.right {
+  transform: translateX(40px);
+  right: 0;
 }
