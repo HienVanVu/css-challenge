@@ -20,7 +20,7 @@
           <p class="header">Bill</p>
           <div class="input__text">
             <img src="images/icon-dollar.svg" alt="" />
-            <input type="number" placeholder="0" />
+            <input type="number" id="bill-amount" placeholder="0" />
           </div>
         </div>
 
@@ -53,8 +53,9 @@
             </label>
 
             <label for="custom" class="percentage-item custom">
-              Custom
+              <p>Custom</p>
               <input type="radio" name="percentage" id="custom" value="custom" />
+              <input type="number" placeholder="0" id="tip-amount" />
             </label>
           </div>
         </div>
@@ -63,7 +64,7 @@
           <p class="header">Number of People</p>
           <div class="input__text">
             <img src="images/icon-person.svg" alt="" />
-            <input type="number" placeholder="0" />
+            <input type="number" placeholder="0" id="people-amount" />
           </div>
         </div>
       </div>
@@ -72,12 +73,12 @@
         <div class="outputs">
           <div class="output">
             <p class="header">Tip Amount <br /><span>/ person</span></p>
-            <p class="number">$4.27</p>
+            <p class="number">$<span id="cal-tip-amount">0.00</span></p>
           </div>
 
           <div class="output">
             <p class="header">Total <br /><span>/ person</span></p>
-            <p class="number">$32.79</p>
+            <p class="number">$<span id="cal-total-amount">0.00</span></p>
           </div>
         </div>
 

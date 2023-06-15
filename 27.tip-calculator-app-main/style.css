@@ -42,6 +42,8 @@ h1.header {
   margin-top: 60px;
   display: flex;
   gap: 20px;
+  width: 1000px;
+  max-width: 90%;
 }
 
 .inputs,
@@ -90,7 +92,9 @@ h1.header {
 }
 
 .inputs .input div.input__text input:hover,
-.inputs .input div.input__text input:focus {
+.inputs .input div.input__text input:focus,
+.inputs .input .percentages .percentage-item.custom:has(input:checked) input[type="number"]:hover,
+.inputs .input .percentages .percentage-item.custom:has(input:checked) input[type="number"]:focus {
   box-shadow: var(--strong-cyan) 0px 0px 0px 2px;
 }
 
@@ -122,8 +126,38 @@ h1.header {
   color: var(--dark-grayish-cyan);
 }
 
-.inputs .input .percentages input {
+.inputs .input .percentages input[type="radio"] {
   display: none;
+}
+
+.inputs .input .percentages .percentage-item.custom p {
+  font-size: 21px;
+}
+
+.inputs .input .percentages .percentage-item.custom:has(input:checked) {
+  padding: 0;
+}
+
+.inputs .input .percentages .percentage-item.custom input[type="number"],
+.inputs .input .percentages .percentage-item.custom:has(input:checked) p {
+  display: none;
+}
+
+.inputs .input .percentages .percentage-item.custom:has(input:checked) input[type="number"] {
+  display: block;
+  width: 100%;
+  height: 46px;
+  padding: 10px;
+  border: none;
+  font-size: 22px;
+  background-color: var(--very-light-grayish-cyan);
+  outline: none;
+  font-family: 700;
+  font-family: "Space Mono";
+  color: var(--very-dark-cyan);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
 }
 
 .total {
@@ -197,4 +231,10 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 }
