@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Figtree", sans-serif;
+    font-size: 16px;
+}
+
+html {
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 50%);
+    --black: hsl(0, 0%, 7%);
+}
+
+body {
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: var(--white);
+    width: 20%;
+    min-width: 400px;
+    padding: 16px;
+    border-radius: 16px;
+
+    border: 1px solid var(--black);
+    box-shadow: 10px 10px;
+}
+
+.hero__img {
+    width: 100%;
+    border-radius: 14px;
+}
+
+.course__tag {
+    background-color: var(--yellow);
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 800;
+}
+
+.course__name h1 {
+    font-size: 26px;
+}
+
+.course__description p {
+    color: var(--grey);
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+.m-b-20 {
+    margin-bottom: 20px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author__avatar {
+    width: 30px;
+}
+
+.author__name {
+    font-weight: 800;
+}
