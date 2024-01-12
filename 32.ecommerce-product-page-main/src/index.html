@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+        <title>Frontend Mentor | E-commerce product page</title>
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="">
+            <nav class="container">
+                <div class="logo flex-center cursor-pointer">
+                    <img src="../images/icon-menu.svg" alt="" class="m-r-10 mobile-only hamburger-menu" />
+                    <img src="../images/logo.svg" alt="" class="logo__img" />
+                </div>
+
+                <div class="navigation flex-stretch">
+                    <!-- is-open -->
+                    <img src="../images/icon-close.svg" alt="" class="navigation__close mobile-only cursor-pointer" />
+                    <a href="#" class="navigation__item flex-center">Collections</a>
+                    <a href="#" class="navigation__item flex-center">Men</a>
+                    <a href="#" class="navigation__item flex-center">Women</a>
+                    <a href="#" class="navigation__item flex-center">About</a>
+                    <a href="#" class="navigation__item flex-center">Contact</a>
+                </div>
+
+                <div class="user">
+                    <div class="user__cart">
+                        <div class="user__cart__backdrop"></div>
+                        <img src="../images/icon-cart.svg" alt="" class="cart__icon cursor-pointer" />
+
+                        <div class="user__cart__detail">
+                            <div class="user__cart__header p-20">
+                                <p>Cart</p>
+                            </div>
+
+                            <div class="p-20">
+                                <div class="user__cart__list m-b-20">
+                                    <div class="user__cart__item">
+                                        <img src="../images/image-product-1-thumbnail.jpg" alt="" class="user__cart__item__thumbnail" />
+                                        <div class="user__cart__item__detail">
+                                            <p class="user__cart__item__name">Fall Limited Edition Sneakers</p>
+                                            <p class="user__cart__item__price">$125.00 x 3 <span class="total">$375.00</span></p>
+                                        </div>
+                                        <img src="../images/icon-delete.svg" alt="" class="bin cursor-pointer" />
+                                    </div>
+                                </div>
+
+                                <button class="user__cart__checkout cursor-pointers primary-button">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user__detail cursor-pointer">
+                        <img src="../images/image-avatar.png" alt="" class="user__detail__avt" />
+                    </div>
+                </div>
+            </nav>
+
+            <div class="product container">
+                <div class="product__image">
+                    <div class="product__image__main m-b-20 cursor-pointer">
+                        <img src="../images/image-product-1.jpg" alt="" />
+                    </div>
+
+                    <div class="product__image__list destop-only">
+                        <img src="../images/image-product-1-thumbnail.jpg" alt="" class="product__image__item selected" />
+                        <img src="../images/image-product-2-thumbnail.jpg" alt="" class="product__image__item" />
+                        <img src="../images/image-product-3-thumbnail.jpg" alt="" class="product__image__item" />
+                        <img src="../images/image-product-4-thumbnail.jpg" alt="" class="product__image__item" />
+                    </div>
+                </div>
+
+                <div class="product__detail">
+                    <div class="product__detail__company m-b-20">
+                        <p></p>
+                    </div>
+
+                    <div class="product__detail__name m-b-20">
+                        <p></p>
+                    </div>
+
+                    <div class="product__detail_description m-b-20">
+                        <p></p>
+                    </div>
+
+                    <div class="product__detail__price m-b-20">
+                        <div class="product__detail__price__current m-b-10">
+                            <div class="product__detail__price__sale">
+                                <p></p>
+                            </div>
+
+                            <div class="product__detail__price__percent">
+                                <p class="tag"></p>
+                            </div>
+                        </div>
+
+                        <div class="product__detail__price__origin">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="action">
+                        <div class="action__count">
+                            <button class="action__count___minus flex-center">
+                                <img src="../images/icon-minus.svg" alt="" />
+                            </button>
+
+                            <input type="number" class="action__count__number" value="0" />
+
+                            <button class="action__count___plus flex-center">
+                                <img src="../images/icon-plus.svg" alt="" />
+                            </button>
+                        </div>
+
+                        <div class="action__add-to-cart">
+                            <button class="cursor-pointer primary-button action__add-to-cart__btn">
+                                <img src="../images/white-icon-cart.svg" alt="" class="action__add-to-cart__icon" />
+                                <span class="text-no-wrap">Add to cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="script.js"></script>
+</html>
